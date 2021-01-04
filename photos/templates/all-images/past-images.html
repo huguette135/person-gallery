@@ -15,3 +15,16 @@
         <h2 class="text-center"> {{ image.name }} </h2>
         <p class="text-center">{{image.description}} </p>
       <!-- </div> -->
+      <div class="col-md-2"></div>
+    </div>
+
+    {% empty %}
+    <div class="row">
+      <h2 class="text-center">There No Images</h2>
+    </div>
+    {% endfor %}
+
+   </div>
+
+
+{% endblock %}
