@@ -15,7 +15,7 @@ import dj_database_url
 from decouple import config,Csv
 
 MODE=config("MODE", default="dev")
-SECRET_KEY = config('sc$sf(p^z@x%=n@36we#qg&#%+$)0vv(j!2)va52a8m)dqfrfv')
+SECRET_KEY = 'sc$sf(p^z@x%=n@36we#qg&#%+$)0vv(j!2)va52a8m)dqfrfv'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -34,9 +34,9 @@ if config('MODE') == "dev":
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': config('photos'),
-            'USER': config('MacbookAir'),
-            'PASSWORD': config('sam123'),
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
             'HOST': config('DB_HOST'),
             'PORT': '',
         }
@@ -110,8 +110,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'photos',
-        'USER': 'MacbookAir',
-    'PASSWORD':'sam123',
+        'USER': 'huguette',
+    'PASSWORD':'135',
     }
 }
 
